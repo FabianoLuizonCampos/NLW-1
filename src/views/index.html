@@ -1,57 +1,57 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{% extends layout.html %}
 
-    <link rel="stylesheet" href="/styles/main.css">
+<!-- Id da página -->
+{% set pageId = "page-home" %}
+
+<!-- Título -->
+
+<!-- CSS especifico da página -->
+{% block styles %}
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/modal.css">
-    
-    <link rel="stylesheet" href="/styles/responsive.css">
-    
-    
+{% endblock styles %}
 
-
-</head>
-<body>
-
-    <div id="page-home">
+<!-- Conteúdo da página -->    
+{% block content %}
         <div class="content">
-            <header>
-                <img src="/assets/logo.svg" alt="Logomarca"> 
-                <!--                        
-                <a href="/create-point.html">
-                    <span></span> 
-                    Cadastre um ponto de coleta
-                </a>
-                -->
-                <!-- Alteração para ser usando no servidor backend-->
-                <a href="/create-point">
-                    <span></span> 
-                    Cadastre um ponto de coleta
-                </a>
-            </header>
-            
-            <main>
-
-                <h1>Seu marketplace de coleta de resíduos.</h1>
-                    
-                <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-
-                <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a> 
-
-            </main>
+                <header>
+                    <img src="/assets/logo.svg" alt="Logomarca"> 
+                    <!--                        
+                    <a href="/create-point.html">
+                        <span></span> 
+                        Cadastre um ponto de coleta
+                    </a>
+                    -->
+                    <!-- Alteração para ser usando no servidor backend-->
+                    <a href="/create-point">
+                        <span></span> 
+                        Cadastre um ponto de coleta
+                    </a>
+                </header>
                 
-        </div>    
+                <main>
 
-    </div>
+                    <h1>Seu marketplace de coleta de resíduos.</h1>
+                        
+                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
-    {% include "partials/modal.html" %}
+                    <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a> 
 
-    <script src="/scripts/index.js"></script>
-</body>
-</html>
+                </main>
+                    
+            </div> 
+{% endblock content %}
+
+<!-- Modal -->
+{% block modal %}
+        {% include "partials/modal.html" %}
+{% endblock modal %}    
+
+<!-- Scripts -->
+{% block scripts %}
+        <script src="/scripts/index.js"></script>
+{% endblock scripts %} 
+
+
+
+
