@@ -1,7 +1,7 @@
 {
   "name": "NLW",
   "version": "1.0.0",
-  "description": "",
+  "description": "* `node -v`         Verificar a versão do node\r * `npm -v`          Verificar a versão do npm",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/server.js"
