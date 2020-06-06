@@ -42,3 +42,4 @@
 
 * `npm install nunjucks`    Instalar o NunJucks.js - HTML com superpoderes
 
+* `npm install sqlite3`     Instalar o SQLite3 na nossa aplicação

@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends "layout.html" %}
+
+<!-- Id da página -->
+{% set pageId = "page-search-results" %}
+
+<!-- Título -->
+{% block title %}
     <title>Resultado da pesquisa</title>
+{% endblock title %}
     
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/styles/main.css">
+<!-- CSS especifico da página -->
+{% block styles %}
     <link rel="stylesheet" href="/styles/search-results.css">    
-    <link rel="stylesheet" href="/styles/responsive.css"> 
+{% endblock styles %}
 
+<!-- Conteúdo da página -->    
+{% block content %}
 
-</head>
-<body>
-
-    <div id="page-search-results">
-        
             <!-- HEADER PARTIALS -->
             {% include "partials/page-header.html" %}
 
@@ -52,13 +51,6 @@
 
                 </div>
 
-            </main>
-            
-            
-                
-        
+            </main>     
 
-    </div>
-
-</body>
-</html>
+{% endblock content %}
